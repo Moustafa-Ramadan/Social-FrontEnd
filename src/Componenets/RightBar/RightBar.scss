@@ -1,0 +1,79 @@
+@import "../../Style.scss";
+.RightBar{
+    @include themify($themes){
+    flex: 3;
+    position: sticky;
+    top: 50px;
+    height: calc(100vh - 50px);
+    overflow: scroll;
+    background-color: themed("bgSoft");
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    @include mobile{
+        display: none;
+        }
+        @include tablet{
+            display: none;
+            }
+    .container{
+        padding: 20px;
+        .item{
+            padding: 20px;
+            margin-bottom: 20px;
+    background-color: themed("bg");
+
+            span{
+           color: themed("textColorSoft");
+           display: inline-block;
+           margin-bottom: 10px;
+            }
+            .user{
+                display: flex;
+                align-items: center;
+                justify-content: space-between ;
+                margin-bottom: 15px;
+                .userInfo{
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    
+                    img{
+    
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        margin-right: 10px;
+                       
+                        
+                    }
+                    p{
+                        color: themed("textColorSoft"); 
+                    }
+                    
+                    .online{
+                        
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            background-color: limegreen;
+                            position: absolute;
+                            top: 60%;
+                            left: 28px;
+                          
+                    }
+                    span{
+                        font-weight: 500;
+                        color: themed("textColor");
+
+                    }
+                }
+            }
+.noRequests{
+    color: themed("textColor");
+}
+        }
+    }
+}
+}

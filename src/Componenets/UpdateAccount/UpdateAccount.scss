@@ -1,0 +1,35 @@
+@import "../../style.scss";
+ .UpdateAccount{
+    @include themify($themes) {
+//   padding: 30px;
+   .container{
+    -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+     box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+     border-radius: 20px;
+     text-align: center;
+     background-color:themed("bg");
+     border: 1px solid themed("border");
+     padding: 20px;
+   
+   
+.formData{
+    padding: 20px;
+    
+             form{
+                button{
+                    color: themed("textColor");
+                    font-size: 18px;
+                }
+                    input{
+                        background-color: transparent;
+                        border: 1px solid themed("border");
+                        color: themed("textColor");
+                    }
+             }}
+             
+
+    }
+
+
+}}

@@ -1,0 +1,158 @@
+@import "../../Style.scss";
+
+// body{
+//     background-color: #e0e0e0;
+// }
+
+.navbar{
+
+    @include themify($themes){
+    border-bottom: 1px solid themed("border");
+    // background-color: #fff;
+    background-color: themed("bg");
+    color: themed("textColor");
+    position: sticky;
+    top: 0;
+   z-index: 9999;
+   
+   span{
+    color: themed("textColor");
+   }
+   button{
+    background-color: themed("bgSoft");
+    span{
+        background-color: themed("bgSoft");
+       }
+   }
+   
+ .navbar-collapse{
+display: flex;
+justify-content: space-between;
+.apps{
+    @include mobile{
+        flex-direction: row;
+        gap: 20px;
+    }  
+    @include tablet{
+        flex-direction: row;
+        gap: 20px;
+    }  
+}
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    .user-notification{
+        display: flex;
+        gap: 20px; 
+    }
+    
+    .dropdown{
+        
+       a {
+        color: themed("textColor")
+       } 
+       ul{
+        background-color: themed("bg");
+        li{
+            color: themed("textColor");
+            span{
+                cursor: pointer;
+                color: themed("textColor")
+            };
+            hr{
+                background-color: themed("border")
+            }
+
+        }
+        li:hover{
+            background-color: themed("bg"); 
+        }
+       }
+    }
+}
+.user{
+    @include mobile{
+        flex-direction: column;
+        gap: 20px;
+    } 
+}
+
+    @include mobile{
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+    }
+}
+    
+  .navbar-brand{
+color: themed("logo");
+font-weight: bold;
+font-size: 20px;
+    }
+.navbar-nav{
+   .nav-item{
+    i{
+        color: themed("textColor");
+    }
+   } 
+}  
+form{
+    display: flex;
+    width: 50%;
+    position: relative;
+    input{
+        background-color: themed("bgSoft");
+        border: 1px solid themed("border");
+        color: themed("textColor");
+    }
+    
+}  
+
+.searchResults{
+    width: 99%;
+    color: themed("textColor");
+    background-color: themed("bg"); 
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    z-index: 99999999;
+    border: 1px solid themed("border");
+    .userInfo{
+        display: flex;
+        gap: 20px;
+        
+img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  }
+  
+        .details{
+            display: flex;
+            flex-direction: column;
+            .name{
+            font-weight: 500;
+            }
+            .date{
+                font-size: 12px;
+            }
+        }
+       
+       
+    }
+}
+}}
+
+ul img{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+   
+}
+
